@@ -15,6 +15,9 @@ jobs:
     permissions:
       contents: read
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Set up PHP 8.5
         uses: shivammathur/setup-php@v2
         with:
@@ -22,3 +25,9 @@ jobs:
           extensions: curl, dom, intl, pdo_sqlite, sqlite3, zip
           tools: composer:v2
           coverage: none
+
+      - name: Verify PHP and Composer platform requirements
+        run: |
+          php -v
+          composer --version
+          composer check-platform-reqs
