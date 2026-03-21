@@ -30,5 +30,5 @@ Common types:
 Examples:
 
 - `fix: update API routes`
-- `feat: RSVP event`
+- `feat: add event RSVP`
 - `fix(docs): update database schema image`
