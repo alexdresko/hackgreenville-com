@@ -19,6 +19,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.5"
-          extensions: curl, dom, intl, pdo_sqlite, sqlite3, zip, :php_psr
+          extensions: curl, dom, intl, pdo_sqlite, sqlite3, zip
           tools: composer:v2
           coverage: none
