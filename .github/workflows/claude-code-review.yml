@@ -6,6 +6,7 @@ on:
 
 jobs:
   claude-review:
+    if: ${{ !github.event.repository.fork || vars.ENABLE_CLAUDE_CODE_REVIEW == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
